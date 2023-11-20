@@ -17,6 +17,21 @@ class Node:
         self.val = key
 
     # A function to do preorder tree traversal
+def invertTree(root):
+    if not root:  # Base Case
+        return root
+    invertTree(root.left)  # Call the left substree
+    invertTree(root.right)  # Call the right substree
+    # Swap the nodes
+    root.left, root.right = root.right, root.left
+    return root  # Return the root
+
+def treeinclues(root, target):
+    if not root:
+        return False
+    if root.val == target:
+        return True
+    return treeinclues(root.left, target) or treeinclues(root.right, target)
 
 def printPreorder(root):
     if root:
@@ -41,5 +56,7 @@ if __name__ == "__main__":
     b.left = d
     b.right = e
     c.right = f
-    print("Preorder traversal of binary tree is")
-    printPreorder(a)
+    # print("Preorder traversal of binary tree is")
+    # printPreorder(a)
+    # x = invertTree(a)
+    print(treeinclues(a, '5'))

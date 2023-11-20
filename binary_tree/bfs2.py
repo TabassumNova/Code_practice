@@ -21,6 +21,9 @@ class Node:
 
 # Iterative Method to print the
 # height of a binary tree
+
+
+
 def printLevelOrder(root):
     # Base Case
     if root is None:
@@ -65,5 +68,7 @@ if __name__ == '__main__':
 
     print("Level Order Traversal of binary tree is -")
     printLevelOrder(a)
+
+    pass
 
 # This code is contributed by Nikhil Kumar Singh(nickzuck_007)

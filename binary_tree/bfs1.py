@@ -7,7 +7,7 @@
 #  / \
 # 4   5
 
-# DFS = 1, 2, 3, 4, 5
+# BFS = 1, 2, 3, 4, 5
 
 # A node structure
 class Node:
